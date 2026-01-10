@@ -15,4 +15,5 @@ jobs:
       - uses: gautamkrishnar/blog-post-workflow@v1
         with:
           # SETZE HIER DEIN RSS FEED EIN (z.B. dev.to / medium / eigener blog)
-          feed_list: "https://dev.to/feed/YOUR_USERNAME"
+          feed_list: "https://dev.to/feed/sargisheiser"
+
