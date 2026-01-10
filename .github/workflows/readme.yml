@@ -1,27 +1,3 @@
-name: Build README
-
-on:
-  schedule:
-    - cron: "0 */3 * * *"
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - run: pip install requests
-
-      - run: python scripts/generate_readme.py
-
       - name: Commit changes
         run: |
           if git diff --quiet; then
@@ -29,7 +5,11 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
+
             git add README.md
             git commit -m "chore: auto-update README"
-            git push
+
+            # IMPORTANT: sync with remote before pushing (avoids "fetch first")
+            git pull --rebase origin main
+            git push origin main
           fi
