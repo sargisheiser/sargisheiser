@@ -3,6 +3,10 @@
 Welcome to my page!  
 I’m **Sargis**, an **AI & Full-Stack Engineer** based in **Berlin, Germany 🇩🇪**.
 
+┌───────────────────────────────────────────────────────────────┐
+│ AI • Full-Stack • Agents • Automation • SaaS                  │
+│ Python / FastAPI • TypeScript / React • PostgreSQL • Docker   │
+└───────────────────────────────────────────────────────────────┘
 
 
 ## Things I code with
@@ -75,8 +79,11 @@ I’m **Sargis**, an **AI & Full-Stack Engineer** based in **Berlin, Germany �
 
 ---
 
+## Stats
+
 ![Stats](https://github-readme-stats.vercel.app/api?username=sargisheiser&show_icons=true&theme=tokyonight)
 ![Streak](https://streak-stats.demolab.com?user=sargisheiser&theme=tokyonight)
+
 
 ---
 
@@ -88,4 +95,4 @@ I’m **Sargis**, an **AI & Full-Stack Engineer** based in **Berlin, Germany �
 ---
 
 > This README is generated automatically (every 3 hours).  
-> Last refresh: **2026-01-10 22:42 UTC**
+> Last refresh: **2026-01-10 22:49 UTC**
