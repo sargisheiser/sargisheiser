@@ -1,5 +1,7 @@
-## Hi there 👋
+Hey! Nice to see you.
 
+Welcome to my page!  
+I'm Sargis, an AI & Full-Stack Engineer based in Berlin, Germany
 <!--
 **sargisheiser/sargisheiser** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
