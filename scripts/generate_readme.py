@@ -138,18 +138,15 @@ I’m **Sargis**, an **AI & Full-Stack Engineer** based in **{LOCATION}**.
 
 ### AI / LLM / Agents
 {badge("OpenAI", "openai")}
+{badge("Claude", "claude-ai")}
 {badge("LangChain", "langchain")}
+{badge("Cursor", "cursor")}
 {badge("RAG")}
 {badge("Embeddings")}
 {badge("Vector DB")}
 {badge("Prompt Engineering")}
 {badge("AI Agents")}
-{badge("Automation")}
-
-### Computer Vision (HyperFit)
-{badge("OpenCV", "opencv")}
-{badge("MediaPipe")}
-{badge("Computer Vision")}
+{badge("n8n", "n8n")}
 
 ### Data / Backend
 {badge("PostgreSQL", "postgresql")}
@@ -158,22 +155,20 @@ I’m **Sargis**, an **AI & Full-Stack Engineer** based in **{LOCATION}**.
 {badge("Pydantic", "pydantic")}
 {badge("REST API")}
 {badge("Web Scraping")}
-{badge("Data Pipelines")}
+{badge("APIs")}
 
 ### DevOps / Tools
 {badge("Docker", "docker")}
 {badge("Git", "git")}
 {badge("GitHub Actions", "githubactions")}
 {badge("Linux", "linux")}
-{badge("CI/CD")}
-{badge("Testing")}
-{badge("PyTest", "pytest")}
-{badge("Postman", "postman")}
 
 ### Product / Project
 {badge("Agile")}
 {badge("Scrum")}
-{badge("Project Management")}
+{badge("Notion", "notion")}
+{badge("Linear", "linear")}
+{badge("Jira", "jira")}
 {badge("SaaS")}
 
 
