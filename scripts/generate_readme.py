@@ -7,21 +7,50 @@ USERNAME = "sargisheiser"
 LINKEDIN_URL = "https://www.linkedin.com/in/sargis-heiser/"
 LOCATION = "Berlin, Germany 🇩🇪"
 
-# Always show these first (order matters). Then fill up to 6 by stars.
-PINNED_REPOS = [
-    "hyperfit",
-    "wono_ai",
-    "hyperfit_mobile",
-    "masterblog_api",
-    "book_alchemy",
-]
-
 API_BASE = "https://api.github.com"
 
-# Cyberpunk palette
-BG = "0b0f14"
-NEON = "00ff9c"   # neon green
-NEON2 = "ff2bd6"  # neon pink (optional accents)
+# Badge style (neutral, recruiter-friendly)
+BG = "111827"       # dark slate
+ACCENT = "60A5FA"   # blue
+
+# Curated (max 12–14). Recruiter wants focus, not 50 labels.
+BADGES = [
+    ("Python", "python"),
+    ("FastAPI", "fastapi"),
+    ("PostgreSQL", "postgresql"),
+    ("SQLAlchemy", "sqlalchemy"),
+    ("Docker", "docker"),
+    ("GitHub Actions", "githubactions"),
+    ("OpenAI", "openai"),
+    ("Claude", None),          # no reliable shields logo -> text badge
+    ("LangChain", None),       # text badge (safe)
+    ("RAG", None),             # text badge (safe)
+    ("Jira", "jira"),
+    ("Notion", "notion"),
+    ("Linear", "linear"),
+]
+
+# Selected projects with context (this is what sells)
+SELECTED_PROJECTS = [
+    {
+        "name": "HyperFit",
+        "url": "https://github.com/sargisheiser/hyperfit",
+        "one_liner": "AI-powered fitness analysis using computer vision + LLM-based coaching.",
+        "stack": "Python · MediaPipe · OpenAI · FastAPI",
+    },
+    {
+        "name": "WONO AI",
+        "url": "https://github.com/sargisheiser/wono_ai",
+        "one_liner": "Automation-focused AI platform for data-driven workflows and integrations.",
+        "stack": "Python · APIs · LLMs",
+    },
+    {
+        "name": "masterblog_api",
+        "url": "https://github.com/sargisheiser/masterblog_api",
+        "one_liner": "Backend service for content & data workflows (API-first).",
+        "stack": "Python · FastAPI · PostgreSQL",
+    },
+]
 
 def gh_headers():
     h = {"Accept": "application/vnd.github+json"}
@@ -43,62 +72,29 @@ def get_blog_section(existing_readme: str) -> str:
         m = pattern.search(existing_readme)
         if m:
             return m.group(0)
+
+    # Placeholder (will be replaced by blog workflow once posts exist)
     return f"""{start}
-- ░░░ NO FEED CONNECTED YET ░░░
+- (Blog feed connected — posts will appear here automatically.)
 {end}"""
 
-def fetch_repos():
-    return safe_get(f"{API_BASE}/users/{USERNAME}/repos", params={"per_page": 100, "sort": "updated"})
-
-def pick_repos(all_repos):
-    repos = [r for r in all_repos if not r.get("fork") and not r.get("archived")]
-    by_name = {r["name"].lower(): r for r in repos}
-
-    chosen = []
-    for name in PINNED_REPOS:
-        repo = by_name.get(name.lower())
-        if repo:
-            chosen.append(repo)
-
-    remaining = [r for r in repos if r not in chosen]
-    remaining = sorted(remaining, key=lambda x: x.get("stargazers_count", 0), reverse=True)
-
-    # Fill up to 6
-    chosen += remaining[: max(0, 6 - len(chosen))]
-    return chosen[:6]
-
-def count_open_prs(repo_full_name: str) -> int:
-    q = f"repo:{repo_full_name} is:pr is:open"
-    data = safe_get(f"{API_BASE}/search/issues", params={"q": q, "per_page": 1})
-    return int(data.get("total_count", 0))
-
-def build_projects_table(repos):
-    lines = []
-    lines.append("| Project | ⭐ Stars | 🍴 Forks | 🐛 Open Issues | 🔀 Open PRs |")
-    lines.append("|---|---:|---:|---:|---:|")
-
-    for r in repos:
-        name = r["name"]
-        url = r["html_url"]
-        full = r["full_name"]
-
-        stars = r.get("stargazers_count", 0)
-        forks = r.get("forks_count", 0)
-
-        open_prs = count_open_prs(full)
-        open_issues_total = int(r.get("open_issues_count", 0))
-        open_issues = max(open_issues_total - open_prs, 0)
-
-        lines.append(f"| [{name}]({url}) | {stars} | {forks} | {open_issues} | {open_prs} |")
-
-    return "\n".join(lines)
-
-def badge(label, logo=None):
-    # label without spaces for URL
+def badge(label: str, logo: str | None):
     safe_label = label.replace(" ", "%20")
     if logo:
-        return f"![{label}](https://img.shields.io/badge/{safe_label}-{BG}?style=for-the-badge&logo={logo}&logoColor={NEON})"
-    return f"![{label}](https://img.shields.io/badge/{safe_label}-{BG}?style=for-the-badge&logoColor={NEON})"
+        return f"![{label}](https://img.shields.io/badge/{safe_label}-{BG}?style=for-the-badge&logo={logo}&logoColor={ACCENT})"
+    return f"![{label}](https://img.shields.io/badge/{safe_label}-{BG}?style=for-the-badge&logoColor={ACCENT})"
+
+def render_badges():
+    return "\n".join(badge(lbl, lg) for (lbl, lg) in BADGES)
+
+def render_selected_projects():
+    lines = []
+    for p in SELECTED_PROJECTS:
+        lines.append(f"**[{p['name']}]({p['url']})**  ")
+        lines.append(f"{p['one_liner']}  ")
+        lines.append(f"*{p['stack']}*")
+        lines.append("")  # blank line
+    return "\n".join(lines).strip()
 
 def main():
     existing = ""
@@ -107,71 +103,42 @@ def main():
             existing = f.read()
 
     blog_section = get_blog_section(existing)
-    repos = fetch_repos()
-    chosen = pick_repos(repos)
-    projects_md = build_projects_table(chosen)
-
     last_refresh = dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
-    readme = f"""# 😎 Hey! Nice to see you.
+    readme = f"""# Sargis Heiser
 
-Welcome to my page!  
-I’m **Sargis**, an **AI & Full-Stack Engineer** based in **{LOCATION}**.
-
-
-## Things I code with
-
-### Core
-{badge("Python", "python")}
-{badge("FastAPI", "fastapi")}
-{badge("TypeScript", "typescript")}
-{badge("JavaScript", "javascript")}
-{badge("React", "react")}
-{badge("Vite", "vite")}
-{badge("Tailwind CSS", "tailwindcss")}
-{badge("Node.js", "nodedotjs")}
-
-### AI / LLM / Agents
-{badge("OpenAI", "openai")}
-{badge("Claude", "claude-ai")}
-{badge("LangChain", "langchain")}
-{badge("Cursor", "cursor")}
-{badge("RAG")}
-{badge("Embeddings")}
-{badge("Vector DB")}
-{badge("Prompt Engineering")}
-{badge("AI Agents")}
-{badge("n8n", "n8n")}
-
-### Data / Backend
-{badge("PostgreSQL", "postgresql")}
-{badge("SQL")}
-{badge("SQLAlchemy", "sqlalchemy")}
-{badge("Pydantic", "pydantic")}
-{badge("REST API")}
-{badge("Web Scraping")}
-{badge("APIs")}
-
-### DevOps / Tools
-{badge("Docker", "docker")}
-{badge("Git", "git")}
-{badge("GitHub Actions", "githubactions")}
-{badge("Linux", "linux")}
-
-### Product / Project
-{badge("Agile")}
-{badge("Scrum")}
-{badge("Notion", "notion")}
-{badge("Linear", "linear")}
-{badge("Jira", "jira")}
-{badge("SaaS")}
-
+**AI Engineer (Python, LLMs, Automation)**  
+Background in IT Project & Product Management · {LOCATION}
 
 ---
 
-## Open source projects
+## Profile
 
-{projects_md}
+AI Engineer with a strong background in **IT project and product management**, now focused on building  
+**AI-driven backend systems, LLM applications, and automation solutions**.
+
+I translate business requirements into scalable technical solutions with hands-on work in  
+**Python APIs, data systems, and modern AI tooling**.
+
+---
+
+## Core Expertise
+
+- **AI Engineering & LLM Systems** (RAG, agents, prompt engineering, automation workflows)  
+- **Backend Engineering (Python)** (FastAPI, SQL, PostgreSQL, APIs)  
+- **Product & Delivery** (Agile execution, Jira/Linear, stakeholder communication, end-to-end ownership)
+
+---
+
+## Tech Stack
+
+{render_badges()}
+
+---
+
+## Selected Projects
+
+{render_selected_projects()}
 
 ---
 
@@ -181,27 +148,17 @@ I’m **Sargis**, an **AI & Full-Stack Engineer** based in **{LOCATION}**.
 
 ---
 
-## Stats
-![Stats](https://github-readme-stats.vercel.app/api?username=sargisheiser&show_icons=true&theme=tokyonight)
-![Streak](https://streak-stats.demolab.com?user=sargisheiser&theme=tokyonight)
+## Contact
 
-
-
----
-
-## Where to find me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-{BG}?style=for-the-badge&logo=linkedin&logoColor={NEON})]({LINKEDIN_URL})
-[![GitHub](https://img.shields.io/badge/GitHub-{BG}?style=for-the-badge&logo=github&logoColor={NEON})](https://github.com/{USERNAME})
+- LinkedIn: {LINKEDIN_URL}  
+- GitHub: https://github.com/{USERNAME}
 
 ---
 
-> This README is generated automatically (every 3 hours).  
-> Last refresh: **{last_refresh}**
+_Last refresh: **{last_refresh}** (auto-generated)_
 """
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme)
 
 if __name__ == "__main__":
     main()
-
