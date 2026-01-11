@@ -1,1 +1,51 @@
+name: Build Profile README
 
+on:
+  schedule:
+    - cron: "15 6 * * *"   # daily 06:15 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: profile-readme
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Build blog snippet first (non-blocking: script itself never hard-fails feed errors)
+      - name: Refresh blog snippet
+        run: python scripts/fetch_blog.py
+
+      - name: Build README from template + data
+        run: python scripts/build_readme.py
+
+      - name: Commit & push changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add README.md data/blog_snippet.md assets/hero.svg || true
+          git commit -m "chore: update profile README"
+          git push
