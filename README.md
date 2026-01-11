@@ -11,11 +11,11 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 ---
 
 ## Proof (high-signal)
+- **500K+ end users served** — Scalable public-sector and enterprise systems
 - **170+ platforms modernized** — Public-sector and enterprise modernization programs
 - **60% reduction in manual content work** — AI-enabled CMS automation and workflow optimization
 - **40% faster reporting** — Python-based data pipelines and automation scripts
 - **10+ client projects delivered** — End-to-end ownership across product & delivery
-- **500K+ end users served** — Scalable systems with real-world adoption
 
 ---
 
@@ -39,7 +39,7 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 —
 
-### [WONO AI](https://github.com/sargisheiser/wono_ai)
+### [WONO AI](https://github.com/sargisheiser/wono_ai-)
 ---
 **What it is:** Automation-focused AI platform for data-driven workflows and integrations.
 
@@ -80,7 +80,7 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 ---
 
 ## Latest writing
-<!-- auto-generated: fetch_blog.py | 2026-01-11 16:19 UTC -->
+<!-- auto-generated: fetch_blog.py | 2026-01-11 16:40 UTC -->
 <!-- feed errors (non-blocking): devto: HTTPError, medium: HTTPError, github_activity: HTTPError -->
 - Writing in progress — technical notes coming soon.
 
@@ -93,4 +93,4 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 
 ---
-_Last refresh: **2026-01-11 16:19 UTC** (auto-generated)_
+_Last refresh: **2026-01-11 16:40 UTC** (auto-generated)_
