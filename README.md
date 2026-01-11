@@ -10,7 +10,7 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 ---
 
-## Proof (high-signal)
+## Proof 
 - **500K+ end users served** — Scalable public-sector and enterprise systems
 - **170+ platforms modernized** — Public-sector and enterprise modernization programs
 - **60% reduction in manual content work** — AI-enabled CMS automation and workflow optimization
@@ -66,7 +66,7 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 ---
 
-## Stack (focused)
+## Stack 
 **AI Engineering:** LLM applications, Retrieval-Augmented Generation (RAG), Prompt engineering, AI workflow automation
 
 **Backend:** Python, FastAPI, REST APIs, SQL, PostgreSQL
@@ -80,7 +80,7 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 ---
 
 ## Latest writing
-<!-- auto-generated: fetch_blog.py | 2026-01-11 16:40 UTC -->
+<!-- auto-generated: fetch_blog.py | 2026-01-11 19:20 UTC -->
 <!-- feed errors (non-blocking): devto: HTTPError, medium: HTTPError, github_activity: HTTPError -->
 - Writing in progress — technical notes coming soon.
 
@@ -93,4 +93,4 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 
 ---
-_Last refresh: **2026-01-11 16:40 UTC** (auto-generated)_
+_Last refresh: **2026-01-11 19:20 UTC** (auto-generated)_
