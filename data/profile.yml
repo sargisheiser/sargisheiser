@@ -1,1 +1,18 @@
+name: Sargis Heiser
+role: AI Engineer
+location: Berlin, Germany
+tagline: "AI Engineer · Python · LLM Systems · Automation"
 
+contact:
+  email: sargis.heiser@gmail.com
+  github: https://github.com/sargisheiser
+  linkedin: https://www.linkedin.com/in/sargis-heiser/
+
+focus:
+  - AI backend systems
+  - LLM applications (RAG, agents, automation)
+  - Python APIs & data-driven workflows
+
+availability:
+  relocation: possible
+  work_authorization: EU / Germany
