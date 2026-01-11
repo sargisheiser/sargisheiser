@@ -71,4 +71,4 @@ Backend service for content & data workflows (API-first).
 
 ---
 
-_Last refresh: **2026-01-10 23:05 UTC** (auto-generated)_
+_Last refresh: **2026-01-11 01:50 UTC** (auto-generated)_
