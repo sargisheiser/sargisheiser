@@ -1,1 +1,11 @@
+feeds:
+  - name: devto
+    url: https://dev.to/feed/sargisheiser
+  - name: medium
+    url: https://medium.com/feed/@sargisheiser
+  - name: github_activity
+    url: https://rsshub.app/github/user/sargisheiser
 
+settings:
+  max_posts: 5
+  fallback_message: "Writing in progress — technical notes coming soon."
