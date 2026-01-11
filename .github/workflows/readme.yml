@@ -37,6 +37,8 @@ jobs:
         run: python scripts/build_readme.py
 
       - name: Commit & push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if git diff --quiet; then
             echo "No changes"
@@ -48,4 +50,4 @@ jobs:
 
           git add README.md data/blog_snippet.md assets/hero.svg || true
           git commit -m "chore: update profile README"
-          git push
+          git push origin HEAD:${GITHUB_REF_NAME}
