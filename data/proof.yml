@@ -1,11 +1,15 @@
 proof:
+  - metric: "500K+ end users served"
+    context: "Scalable public-sector and enterprise systems"
+
   - metric: "170+ platforms modernized"
     context: "Public-sector and enterprise modernization programs"
+
   - metric: "60% reduction in manual content work"
     context: "AI-enabled CMS automation and workflow optimization"
+
   - metric: "40% faster reporting"
     context: "Python-based data pipelines and automation scripts"
+
   - metric: "10+ client projects delivered"
     context: "End-to-end ownership across product & delivery"
-  - metric: "500K+ end users served"
-    context: "Scalable systems with real-world adoption"
