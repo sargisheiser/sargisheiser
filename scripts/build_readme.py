@@ -70,20 +70,25 @@ def render_projects_block(projects_data: dict, max_flagship: int = 3, max_second
 
         title = f"### [{name}]({url})" if url else f"### {name}"
         lines = [title]
+        lines.append("---")
+
         if one_liner:
-            lines.append(one_liner)
+            lines.append(f"**What it is:** {one_liner}")
 
         if impact:
             lines.append("")
-            lines.append("**Impact**")
+            lines.append("**Why it matters:**")
             for i in impact[:3]:
                 lines.append(f"- {i}")
 
         if stack:
             lines.append("")
-            lines.append(f"**Stack:** {', '.join(stack[:8])}")
+            lines.append(f"**Stack:** {', '.join(stack[:10])}")
 
+        lines.append("")
+        lines.append("—")
         return "\n".join(lines)
+
 
     out = []
 
