@@ -1,1 +1,30 @@
+skills:
+  ai_engineering:
+    - LLM applications
+    - Retrieval-Augmented Generation (RAG)
+    - Prompt engineering
+    - AI workflow automation
 
+  backend:
+    - Python
+    - FastAPI
+    - REST APIs
+    - SQL
+    - PostgreSQL
+
+  data:
+    - Data processing
+    - Automation scripts
+    - Reporting pipelines
+
+  tooling:
+    - Git
+    - GitHub Actions
+    - Docker
+    - Jira
+    - Notion
+
+  methods:
+    - Agile delivery
+    - Clean code principles
+    - Test-driven development (TDD)
