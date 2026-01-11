@@ -9,9 +9,10 @@ contact:
   linkedin: https://www.linkedin.com/in/sargis-heiser/
 
 focus:
-  - AI backend systems
-  - LLM applications (RAG, agents, automation)
-  - Python APIs & data-driven workflows
+  - Build AI backend systems with Python (FastAPI, SQL) for production workflows
+  - Design LLM applications (RAG, agents) with evaluation & reliability in mind
+  - Automate data-driven processes end-to-end (APIs, pipelines, reporting)
+
 
 availability:
   relocation: possible
