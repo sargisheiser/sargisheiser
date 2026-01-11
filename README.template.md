@@ -10,7 +10,7 @@ Berlin, Germany · {{LINKEDIN}} · {{GITHUB}}
 
 ---
 
-## Proof (high-signal)
+## Proof 
 {{PROOF_BLOCK}}
 
 ---
@@ -25,7 +25,7 @@ Berlin, Germany · {{LINKEDIN}} · {{GITHUB}}
 
 ---
 
-## Stack (focused)
+## Stack 
 {{STACK_BLOCK}}
 
 ---
