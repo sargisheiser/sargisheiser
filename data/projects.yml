@@ -14,7 +14,7 @@ projects:
     category: flagship
 
   - name: WONO AI
-    url: https://github.com/sargisheiser/wono_ai
+    url: https://github.com/sargisheiser/wono_ai-
     status: active
     one_liner: "Automation-focused AI platform for data-driven workflows and integrations."
     impact:
