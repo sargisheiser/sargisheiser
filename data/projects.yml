@@ -1,1 +1,40 @@
+projects:
+  - name: HyperFit
+    url: https://github.com/sargisheiser/hyperfit
+    status: active
+    one_liner: "AI-powered fitness analysis using computer vision and LLM-based coaching."
+    impact:
+      - "Automated movement analysis using computer vision"
+      - "LLM-driven feedback & coaching logic"
+    stack:
+      - Python
+      - FastAPI
+      - MediaPipe
+      - OpenAI
+    category: flagship
 
+  - name: WONO AI
+    url: https://github.com/sargisheiser/wono_ai
+    status: active
+    one_liner: "Automation-focused AI platform for data-driven workflows and integrations."
+    impact:
+      - "Python-based automation workflows"
+      - "API-first architecture for extensibility"
+    stack:
+      - Python
+      - APIs
+      - LLMs
+    category: flagship
+
+  - name: masterblog_api
+    url: https://github.com/sargisheiser/masterblog_api
+    status: stable
+    one_liner: "Backend service for content and data workflows (API-first)."
+    impact:
+      - "Structured backend for content management"
+      - "Clean API design for extensibility"
+    stack:
+      - Python
+      - FastAPI
+      - PostgreSQL
+    category: secondary
