@@ -26,15 +26,20 @@ projects:
       - LLMs
     category: flagship
 
-  - name: masterblog_api
-    url: https://github.com/sargisheiser/masterblog_api
-    status: stable
-    one_liner: "Backend service for content and data workflows (API-first)."
+  - name: RechnungsChecker
+    url: https://github.com/sargisheiser/rechnungschecker
+    status: active
+    one_liner: "Full-stack e-invoice validation and conversion platform for German SMEs and tax advisors."
     impact:
-      - "Structured backend for content management"
-      - "Clean API design for extensibility"
+      - "XRechnung & ZUGFeRD validation against official KoSIT rules"
+      - "PDF-to-e-invoice conversion with German error messages & fix suggestions"
+      - "Batch processing, webhook notifications, and complete REST API"
     stack:
       - Python
       - FastAPI
       - PostgreSQL
-    category: secondary
+      - Redis
+      - React
+      - TypeScript
+      - Docker
+    category: flagship

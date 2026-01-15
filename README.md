@@ -51,16 +51,16 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 —
 
-## Additional projects
-### [masterblog_api](https://github.com/sargisheiser/masterblog_api)
+### [RechnungsChecker](https://github.com/sargisheiser/rechnungschecker)
 ---
-**What it is:** Backend service for content and data workflows (API-first).
+**What it is:** Full-stack e-invoice validation and conversion platform for German SMEs and tax advisors.
 
 **Why it matters:**
-- Structured backend for content management
-- Clean API design for extensibility
+- XRechnung & ZUGFeRD validation against official KoSIT rules
+- PDF-to-e-invoice conversion with German error messages & fix suggestions
+- Batch processing, webhook notifications, and complete REST API
 
-**Stack:** Python, FastAPI, PostgreSQL
+**Stack:** Python, FastAPI, PostgreSQL, Redis, React, TypeScript, Docker
 
 —
 
@@ -93,4 +93,4 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 
 ---
-_Last refresh: **2026-01-15 06:51 UTC** (auto-generated)_
+_Last refresh: **2026-01-15 22:10 UTC** (auto-generated)_
