@@ -80,7 +80,7 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 ---
 
 ## Latest writing
-<!-- auto-generated: fetch_blog.py | 2026-03-31 07:44 UTC -->
+<!-- auto-generated: fetch_blog.py | 2026-04-01 07:54 UTC -->
 <!-- feed errors (non-blocking): devto: HTTPError, medium: HTTPError, github_activity: HTTPError -->
 - Writing in progress — technical notes coming soon.
 
@@ -93,4 +93,4 @@ Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.
 
 
 ---
-_Last refresh: **2026-03-31 07:44 UTC** (auto-generated)_
+_Last refresh: **2026-04-01 07:54 UTC** (auto-generated)_
