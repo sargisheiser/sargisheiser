@@ -1,3 +1,3 @@
-<!-- auto-generated: fetch_blog.py | 2026-07-06 11:03 UTC -->
+<!-- auto-generated: fetch_blog.py | 2026-07-07 10:00 UTC -->
 <!-- feed errors (non-blocking): devto: HTTPError, medium: HTTPError, github_activity: HTTPError -->
 - Writing in progress — technical notes coming soon.
