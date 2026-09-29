@@ -8,9 +8,6 @@
 **AI Product Manager who ships code** · Agents · LLM Systems · Automation
 Berlin, Germany · [LinkedIn](https://www.linkedin.com/in/sargis-heiser/) · [Email](mailto:sargis.heiser@gmail.com)
 
-I own the product side of enterprise AI agents — from signal and shaping to rollout,
-feature flags and release notes — and I build my own products on the side to stay close to the code.
-
 ---
 
 ## Now
