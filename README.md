@@ -1,96 +1,72 @@
 <!-- HERO:START -->
 <p align="left">
-  <img src="assets/hero.svg" alt="Sargis Heiser — AI Engineer" width="100%" />
+  <img src="assets/hero.svg" alt="Sargis Heiser — AI Product Manager" width="100%" />
 </p>
 <!-- HERO:END -->
 
-# Sargis Heiser  
-**AI PM · Python · LLM Systems · Automation**  
-Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.com/sargisheiser
+# Sargis Heiser
+**AI Product Manager who ships code** · Agents · LLM Systems · Automation
+Berlin, Germany · [LinkedIn](https://www.linkedin.com/in/sargis-heiser/) · [Email](mailto:sargis.heiser@gmail.com)
+
+I own the product side of enterprise AI agents — from signal and shaping to rollout,
+feature flags and release notes — and I build my own products on the side to stay close to the code.
 
 ---
 
-## Proof 
-- **500K+ end users served** — Scalable public-sector and enterprise systems
-- **170+ platforms modernized** — Public-sector and enterprise modernization programs
-- **60% reduction in manual content work** — AI-enabled CMS automation and workflow optimization
-- **40% faster reporting** — Python-based data pipelines and automation scripts
-- **10+ client projects delivered** — End-to-end ownership across product & delivery
+## Now
+**Product Manager, Build & Automate @ [Blockbrain](https://blockbrain.ai)** — enterprise AI platform (Germany)
+- **Agent memory** — cross-conversation memory for AI agents, rolled out to all customers
+- **Blockbrain as an MCP server** — exposing agents as tools to external AI clients
+- **Capabilities console** — one admin surface for tools & connectors
+- **Release governance** — feature-flag-driven rollouts and verified client release notes
 
 ---
 
-## Now building
-- Build AI backend systems with Python (FastAPI, SQL) for production workflows
-- Design LLM applications (RAG, agents) with evaluation & reliability in mind
-- Automate data-driven processes end-to-end (APIs, pipelines, reporting)
+## Proof
+- **500K+ end users served** — public-sector & enterprise systems
+- **170+ platforms modernized** — public-sector & enterprise modernization programs
+- **60% less manual content work** — AI-enabled CMS automation
+- **40% faster reporting** — Python data pipelines & automation
+- **10+ client projects delivered** — end-to-end ownership across product & delivery
 
 ---
 
-## Flagship projects
-### [HyperFit](https://github.com/sargisheiser/hyperfit)
----
-**What it is:** AI-powered fitness analysis using computer vision and LLM-based coaching.
-
-**Why it matters:**
-- Automated movement analysis using computer vision
-- LLM-driven feedback & coaching logic
-
-**Stack:** Python, FastAPI, MediaPipe, OpenAI
-
-—
-
-### [WONO AI](https://github.com/sargisheiser/wono_ai-)
----
-**What it is:** Automation-focused AI platform for data-driven workflows and integrations.
-
-**Why it matters:**
-- Python-based automation workflows
-- API-first architecture for extensibility
-
-**Stack:** Python, APIs, LLMs
-
-—
+## Side projects (built end-to-end)
 
 ### [RechnungsChecker](https://github.com/sargisheiser/rechnungschecker)
----
-**What it is:** Full-stack e-invoice validation and conversion platform for German SMEs and tax advisors.
+E-invoice validation & conversion for German SMEs and tax advisors.
+- XRechnung & ZUGFeRD validation against official KoSIT rules, 170+ German fix suggestions
+- PDF → e-invoice conversion with GPT-4o extraction, auto-validated
+- Batch processing, webhooks, full REST API
 
-**Why it matters:**
-- XRechnung & ZUGFeRD validation against official KoSIT rules
-- PDF-to-e-invoice conversion with German error messages & fix suggestions
-- Batch processing, webhook notifications, and complete REST API
+**Stack:** Python · FastAPI · PostgreSQL · Redis · React · TypeScript · Docker
 
-**Stack:** Python, FastAPI, PostgreSQL, Redis, React, TypeScript, Docker
+### [WONO AI](https://github.com/sargisheiser/wono_ai-)
+SaaS that monitors WBS housing listings in Germany and matches them to user profiles.
+- AI-powered listing extraction from unstructured descriptions
+- AI-drafted German application letters, real-time match notifications
+- Stripe subscriptions, GDPR-compliant audit logging
 
-—
+**Stack:** Python · FastAPI · PostgreSQL · Redis · Celery · OpenAI · Gemini
 
----
+### [HyperFit](https://github.com/sargisheiser/HyperFit) · [Mobile](https://github.com/sargisheiser/HyperFit_Mobile)
+AI fitness & nutrition platform — web and mobile.
+- Meal recognition via computer vision
+- Workout tracking with MediaPipe pose estimation
+- LangChain-powered coaching assistant
 
-## Stack 
-**AI Engineering:** LLM applications, Retrieval-Augmented Generation (RAG), Prompt engineering, AI workflow automation
-
-**Backend:** Python, FastAPI, REST APIs, SQL, PostgreSQL
-
-**Data:** Data processing, Automation scripts, Reporting pipelines
-
-**Tooling:** Git, GitHub Actions, Docker, Jira, Notion
-
-**Methods:** Agile delivery, Clean code principles, Test-driven development (TDD)
+**Stack:** Python · FastAPI · React · TypeScript · MediaPipe · LangChain
 
 ---
 
-## Latest writing
-<!-- auto-generated: fetch_blog.py | 2026-09-29 12:55 UTC -->
-<!-- feed errors (non-blocking): devto: HTTPError, medium: HTTPError, github_activity: HTTPError -->
-- Writing in progress — technical notes coming soon.
+## Toolkit
+**Product:** Shape Up, discovery & signal collection, feature-flag rollouts (Unleash), release management, Jira / Confluence
+
+**AI:** LLM apps, RAG, agents, MCP, prompt engineering, LLM observability (Sentry, Langfuse)
+
+**Build:** Python, FastAPI, SQL/PostgreSQL, React/TypeScript, Docker, GitHub Actions
 
 ---
 
 ## Contact
-- LinkedIn: https://www.linkedin.com/in/sargis-heiser/
-- Email: sargis.heiser@gmail.com
-- GitHub: https://github.com/sargisheiser
-
-
----
-_Last refresh: **2026-09-29 12:55 UTC** (auto-generated)_
+[LinkedIn](https://www.linkedin.com/in/sargis-heiser/) · [sargis.heiser@gmail.com](mailto:sargis.heiser@gmail.com)
