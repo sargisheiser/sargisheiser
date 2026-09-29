@@ -5,7 +5,7 @@
 <!-- HERO:END -->
 
 # Sargis Heiser  
-**AI Engineer · Python · LLM Systems · Automation**  
+**AI PM · Python · LLM Systems · Automation**  
 Berlin, Germany · https://www.linkedin.com/in/sargis-heiser/ · https://github.com/sargisheiser
 
 ---
