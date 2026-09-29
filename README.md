@@ -15,10 +15,6 @@ feature flags and release notes — and I build my own products on the side to s
 
 ## Now
 **Product Manager, Build & Automate @ [Blockbrain](https://blockbrain.ai)** — enterprise AI platform (Germany)
-- **Agent memory** — cross-conversation memory for AI agents, rolled out to all customers
-- **Blockbrain as an MCP server** — exposing agents as tools to external AI clients
-- **Capabilities console** — one admin surface for tools & connectors
-- **Release governance** — feature-flag-driven rollouts and verified client release notes
 
 ---
 
